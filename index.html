@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abubakar Khan - Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 100%);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 80%;
+            height: 4px;
+            background-color: #3b82f6; /* Blue-500 */
+            border-radius: 2px;
+        }
+        .skill-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+        .dev-icon {
+            color: #3b82f6; /* Blue-500 */
+        }
+        .ecommerce-icon {
+            color: #10b981; /* Emerald-500 */
+        }
+        /* Custom styles for image */
+        .profile-pic {
+            width: 256px; /* 64 * 4 */
+            height: 256px; /* 64 * 4 */
+            border-radius: 9999px; /* full rounded */
+            object-fit: cover; /* cover the area */
+            border: 4px solid white; /* white border */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition duration-300">KHAN'S. Portfolio</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium">About Me</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300 font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 transition-all duration-300">
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">About Me</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-blue-50">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg py-20 sm:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-3/5 text-center md:text-left mb-10 md:mb-0">
+                <p class="text-xl text-blue-600 font-semibold mb-3">Hello, My Name Is</p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold text-gray-900 leading-tight">Abubakar Khan</h1>
+                <h2 class="text-2xl sm:text-3xl font-light text-gray-700 mt-4">
+                    <span class="font-medium text-blue-700">Android App Developer</span> & <span class="font-medium text-emerald-600">E-commerce Specialist</span>
+                </h2>
+                <p class="text-gray-600 mt-6 max-w-lg">
+                    I am passionate about building effective digital solutions by combining technology and business strategies.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">View My Projects</a>
+                    <a href="#contact" class="px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition duration-300">Download CV</a>
+                </div>
+            </div>
+            
+            <div class="md:w-2/5 flex justify-center">
+                <img src="C:\Users\HD\Pictures\Saved Pictures\bakar.png" 
+                    alt="Abubakar Khan Profile Picture" 
+                    class="profile-pic"
+                    onerror="this.onerror=null; this.src='bakar.png';" 
+                >
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 section-title">About Me</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">A Passion for Development and Digital Business</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        I am a dedicated student at Riphah International University. My education provides me with a strong foundation in core computer science principles and modern development techniques.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        I possess expertise in App Development, Database Management, and crafting robust Web Solutions. My proficiency spans essential languages such as C/C++, Java, and JavaScript.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Beyond development, I have practical experience in implementing business strategies and automation on various E-commerce platforms, including Amazon, eBay, Walmart, and OnBuy.
+                    </p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+                    <i class="fas fa-university text-3xl text-blue-500 mb-3"></i>
+                    <h4 class="text-xl font-bold text-gray-800">Educational Background</h4>
+                    <p class="text-lg text-gray-700 mt-2">Student</p>
+                    <p class="text-gray-500">Riphah International University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+
+    <section id="skills" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 section-title">Skills</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white p-6 rounded-xl shadow-xl skill-card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fab fa-android text-3xl dev-icon mr-3"></i> Core Languages & Android
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Java / Kotlin (Android Development)</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Android Studio & SDK Management</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> XML Layout & UI Design</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> C / C++ (Core Logic & DSA)</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Firebase & Cloud Integration</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-xl skill-card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-shopping-cart text-3xl ecommerce-icon mr-3"></i> E-commerce Platforms
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="ecommerce-icon fas fa-check-circle mr-2"></i> Amazon FBA/FBM Management</li>
+                        <li class="flex items-center"><i class="ecommerce-icon fas fa-check-circle mr-2"></i> eBay Store Management & Listing</li>
+                        <li class="flex items-center"><i class="ecommerce-icon fas fa-check-circle mr-2"></i> Walmart Seller Center Operations</li>
+                        <li class="flex items-center"><i class="ecommerce-icon fas fa-check-circle mr-2"></i> OnBuy Marketplace Management</li>
+                        <li class="flex items-center"><i class="ecommerce-icon fas fa-check-circle mr-2"></i> Listing & Order Processing Automation</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-xl skill-card">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fas fa-database text-3xl dev-icon mr-3"></i> Application & Database
+                    </h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> App Developer (Mobile/Cross-Platform)</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Database Management (SQL/NoSQL)</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Data Modeling and Schema Design</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> API Integration</li>
+                        <li class="flex items-center"><i class="dev-icon fas fa-check-circle mr-2"></i> Problem Solving & Logic Building</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="projects" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 section-title">Featured Projects</h2>
+            <p class="text-gray-600 mb-10 max-w-2xl">
+                Here are some of the platforms I have worked on. Live links and detailed project descriptions will be updated soon.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">E-commerce Automation Suite</h3>
+                            <i class="fas fa-robot text-2xl text-emerald-600"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            A custom application for automating product listing, inventory synchronization, and order processing across multiple marketplaces (Amazon, eBay, Walmart). Built using **Python** for backend logic.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-emerald-200 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-emerald-200 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">API Integration</span>
+                            <span class="bg-emerald-200 text-emerald-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Database</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">University Project Management System</h3>
+                            <i class="fas fa-tasks text-2xl text-blue-600"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            A web application designed to manage student projects, track progress, and facilitate communication between students and supervisors. Focus on secure user roles.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Java</span>
+                            <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Web Development</span>
+                            <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">SQL</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">C++ Data Structure Implementations</h3>
+                            <i class="fas fa-cubes text-2xl text-gray-600"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            A collection of implementations for essential Data Structures and Algorithms (DSA) like Trees, Graphs, Sorting Algorithms, and Linked Lists using **C++**.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">C++</span>
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">DSA</span>
+                            <span class="bg-gray-200 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">Problem Solving</span>
+                        </div>
+                        <a href="#" class="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">View Details <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact" class="py-16 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 section-title">Get In Touch</h2>
+
+            <div class="flex justify-center">
+                <div class="bg-white p-8 rounded-xl shadow-xl max-w-md w-full text-center">
+                    <p class="text-gray-600 text-lg mb-6">
+                        I am currently looking for internship opportunities and new projects where I can apply my development and e-commerce expertise. Feel free to connect!
+                    </p>
+
+                    <div class="flex items-center justify-center space-x-4">
+                        <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                        <a href="mailto:bakikhan0857@gmail.com" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium text-lg">bakikhan0857@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; <span id="current-year"></span> Abubakar Khan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Set current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
